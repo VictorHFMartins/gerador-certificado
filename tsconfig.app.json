@@ -7,7 +7,8 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/app/_pages/certificates/certificates.ts"
   ],
   "exclude": [
     "src/**/*.spec.ts"

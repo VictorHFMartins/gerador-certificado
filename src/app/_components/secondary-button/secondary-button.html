@@ -1,0 +1,10 @@
+<button
+  [ngStyle]="disabled() ? { opacity: '50%' } : {}"
+  class="custom-button d-flex align-items-center"
+  type="button"
+>
+  @if (inputIcon()) {
+    <i class="{{ inputIcon() }}"></i>
+  }
+  {{ inputBttn() }}
+</button>

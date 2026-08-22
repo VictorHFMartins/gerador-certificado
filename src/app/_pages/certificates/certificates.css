@@ -1,0 +1,30 @@
+.list-certificates {
+  max-width: 672px;
+}
+
+.custom-card i {
+  font-size: 3rem;
+  color: #64748b;
+}
+
+.custom-alert {
+  gap: 2px;
+}
+
+.custom-alert-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #1a2856;
+}
+
+.custom-alert-subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #64748b;
+}

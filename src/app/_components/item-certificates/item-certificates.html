@@ -1,0 +1,10 @@
+<div class="custom-card">
+  <section>
+    <h3 class="studdent-name">{{nomeAluno()}}</h3>
+    <time class="small-date">Gerado em {{dataEmissao()}}</time>
+  </section>
+  <app-secondary-button
+    inputBttn="Visualizar"
+    (click)="redirectToCertificate()"
+  ></app-secondary-button>
+</div>

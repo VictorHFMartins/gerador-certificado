@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.remove-btn i {
+  padding: 5.75px;
+  width: 12.5px;
+  height: 12.5px;
+  font-size: 12.5px;
+  color: #e95f5f;
+}
+.remove-btn:hover {
+  background-color: #e2e8e8f0;
+}
+
+hr {
+  all: unset;
+  height: 1px;
+  display: block;
+  background-color: #e2e8e8f0;
+  margin: 0.75rem 0;
+}

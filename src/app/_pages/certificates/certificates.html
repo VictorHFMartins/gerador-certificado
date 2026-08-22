@@ -1,0 +1,27 @@
+<div class="d-flex flex-column align-items-center">
+  <app-page-header></app-page-header>
+
+  @if (certificates.length > 0) {
+    <div class="list-certificates w-100">
+      @for (certificate of certificates; track certificate.id) {
+        <app-item-certificates
+          [nomeAluno]="certificate.nome"
+          [dataEmissao]="certificate.data"
+          [id]="certificate.id"
+        ></app-item-certificates>
+      }
+    </div>
+  } @else {
+    <div class="custom-card w-100 d-flex flex-column align-items-center">
+      <i class="ph ph-certificate"></i>
+      <div class="content-alert mb-3">
+        <h3 class="custom-alert-title">Nenhum certificado gerado</h3>
+        <p class="custom-alert-subtitle">Gere certificates para consultar o histórico</p>
+      </div>
+      <app-secondary-button
+        [inputBttn]="'Gerar certificado'"
+        routerLink="/certificate/new"
+      ></app-secondary-button>
+    </div>
+  }
+</div>

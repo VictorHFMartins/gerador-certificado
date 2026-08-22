@@ -1,0 +1,64 @@
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0;
+  color: #1a2856;
+  margin-bottom: 1.25rem;
+}
+
+.form-atividades-group {
+  margin-bottom: 20px !important;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #1a2856;
+}
+
+.custom-input {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+}
+
+.custom-input:focus {
+  border: 1px solid #3b5ac2;
+  box-shadow: none;
+}
+
+.custom-input-group:has(input:focus) > label {
+  color: #3b5ac2;
+  box-shadow: none;
+}
+
+.error-msg {
+  gap: 0.25rem;
+  color: #d71d1d;
+  margin-top: 0.5rem;
+}
+
+.error-msg p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.custom-input-group:has(.error-msg) > label {
+  color: #d71d1d;
+}
+
+.item-list {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border: radius 8px;
+  padding: 1rem;
+  gap: 075rem;
+}

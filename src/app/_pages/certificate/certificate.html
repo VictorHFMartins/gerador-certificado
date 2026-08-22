@@ -1,0 +1,42 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="d-flex justify-content-between align-items-center certificate-menu w-100">
+    <div class="d-flex align-items-center return-btn" routerLink="/certificates">
+      <i class="ph ph-arrow-left"></i>
+      <p class="m-0">Voltar</p>
+    </div>
+    <app-secondary-button
+      (click)="downloadCertificate()"
+      [inputIcon]="'ph ph-download-simple'"
+      [inputBttn]="'Download'"
+    ></app-secondary-button>
+  </div>
+
+  @if (certificado) {
+    <div #certificadoContainer class="certificate d-flex justify-content-center align-items-center">
+      <img src="./certificade/certificate_ribbon.png" alt="icone-medalha" class="ribbon" />
+      <div class="certificate-area justify-content-center align-items-center d-flex flex-column">
+        <div
+          class="certificate-content d-flex flex-column align-items-center justify-content-center"
+        >
+          <h1>CERTIFICADO DE CONCLUSÃO</h1>
+          <small>Este certificado comprova que</small>
+          <h2 class="nome-aluno">{{ certificado.nome }}</h2>
+          <div class="activity-list d-flex flex-column align-items-center">
+            <p>concluiu com sucesso as seguintes atividades:</p>
+            <p class="activity-list-items">{{ certificado.atividades.join(', ') }}</p>
+          </div>
+          <h3 class="emission-date">
+            Emitido em
+            <time>{{ certificado.data }}</time>
+          </h3>
+          <img
+            class="signature"
+            src="./certificade/certificate_signature.svg"
+            alt="assinatura"
+            class="signature"
+          />
+        </div>
+      </div>
+    </div>
+  }
+</div>
