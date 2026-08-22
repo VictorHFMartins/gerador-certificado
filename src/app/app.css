@@ -1,15 +1,31 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+:host {
+  display: block;
+  min-height: 100vh;
 }
 
 .custom-card {
-  max-width: 672px;
-  gap: 2rem;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: 28rem;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 2rem 4rem 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 1.2rem 1rem 1.6rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) {
+  .custom-card {
+    padding: 1.8rem 1.5rem 2.2rem;
+  }
 }

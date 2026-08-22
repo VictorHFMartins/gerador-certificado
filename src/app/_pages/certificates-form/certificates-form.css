@@ -1,46 +1,62 @@
 
 .card-title {
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.4;
   letter-spacing: 0;
-  color: #1a2856;
+  color: var(--primary);
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .form-atividades-group {
-  margin-bottom: 20px !important;
+  margin-bottom: 1.25rem !important;
 }
 
 label {
+  display: block;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.4;
   letter-spacing: 0;
-  color: #1a2856;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.custom-input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .custom-input {
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  height: 2.5rem;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  min-height: 2.75rem;
+  background: #fff;
 }
 
 .custom-input:focus {
-  border: 1px solid #3b5ac2;
-  box-shadow: none;
+  border: 1px solid var(--primary-strong);
+  box-shadow: 0 0 0 0.2rem rgba(51, 78, 169, 0.12);
+  outline: none;
 }
 
 .custom-input-group:has(input:focus) > label {
-  color: #3b5ac2;
-  box-shadow: none;
+  color: var(--primary-strong);
 }
 
 .error-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.25rem;
-  color: #d71d1d;
+  color: var(--danger);
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .error-msg p {
@@ -48,17 +64,68 @@ label {
   font-size: 0.75rem;
   line-height: 1rem;
   letter-spacing: 0;
-  vertical-align: middle;
 }
 
 .custom-input-group:has(.error-msg) > label {
-  color: #d71d1d;
+  color: var(--danger);
 }
 
 .item-list {
   width: 100%;
-  border: 1px solid #e2e8f0;
-  border: radius 8px;
-  padding: 1rem;
-  gap: 075rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--surface);
+}
+
+form.list-certificates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+form.list-certificates .mb-3,
+form.list-certificates .mb-5 {
+  width: 100%;
+}
+
+.activity-input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.activity-input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.activity-input-row app-secondary-button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .activity-input-row {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .activity-input-row app-secondary-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  form.list-certificates {
+    gap: 1rem;
+  }
+
+  .item-list {
+    padding: 1rem;
+  }
 }

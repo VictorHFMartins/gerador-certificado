@@ -1,15 +1,35 @@
-.custom-button{
-  height: 48px;
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
   padding: 0.8rem 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   color: #fff;
-  font-size: 1rem;
-  background: linear-gradient(90deg,#1a2856 0%, #334ea9 100%);
+  font-size: clamp(0.9rem, 1vw + 0.4rem, 1rem);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-strong) 100%);
   cursor: pointer;
   font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 22px rgba(26, 40, 86, 0.14);
 }
 
-.custom-button:hover{
- opacity: 90%;
+.custom-button:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.custom-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .custom-button {
+    min-height: 3rem;
+    padding: 0.9rem 1.4rem;
+  }
 }

@@ -4,7 +4,22 @@
       <img src="navbar/logo.svg" alt="logo" />
     </a>
 
-    <div class="collapse navbar-collapse justify-content-end">
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="alternarMenu()"
+      aria-controls="navbarContent"
+      [attr.aria-expanded]="menuAberto()"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="navbar-collapse justify-content-end"
+      [class.show]="menuAberto()"
+      id="navbarContent"
+    >
       <ul class="navbar-nav">
         <li class="nav-item d-flex align-items-center">
           <i class="ph ph-medal" [ngClass]="{ active: rlaListCertificates.isActive }"></i>
@@ -14,6 +29,7 @@
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="active"
             class="nav-link p-0"
+            (click)="fecharMenu()"
           >
             Lista de certificates</a
           >
@@ -30,6 +46,7 @@
             [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="active"
             class="nav-link p-0"
+            (click)="fecharMenu()"
             >Gerar certificados</a
           >
         </li>
