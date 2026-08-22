@@ -4,7 +4,7 @@ import { Certificate } from './_pages/certificate/certificate';
 import { certificatesForm } from './_pages/certificates-form/certificates-form';
 
 export const routes: Routes = [
-  { path: '/', component: certificates },
+  { path: '', component: certificates },
   { path: 'certificates', component: certificates },
   { path: 'certificate/new', component: certificatesForm },
   { path: 'certificate/:id', component: Certificate },
